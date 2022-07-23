@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     public static Sprite projectileSprite;
 
     private const float speed = 1;
+
     void Start()
     {
         transform.localScale = new Vector3(0.3f, .3f, .3f);
@@ -25,8 +26,14 @@ public class Projectile : MonoBehaviour
         gameObject.transform.Translate(0, speed, 0.0f);
     }
 
+    /*
+        if projectile handles mothership, handle collision only in Alien_mothershio.OnCollisionEnter2D()
+        
+    */
     void OnCollisionEnter2D(Collision2D col)
     {
+        if( col.gameObject.name == Alien_MotherShip.mothership_GO_name){ return; }
+
         var alienPos = col.gameObject.transform.position;
         Destroy(col.otherCollider.gameObject);
         Destroy(col.gameObject);
