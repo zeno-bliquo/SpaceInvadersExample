@@ -1,0 +1,37 @@
+{
+  "project_info": {
+    "project_number": "160527228258",
+    "firebase_url": "https://unity-space-invaders-rt-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "unity-space-invaders-rt",
+    "storage_bucket": "unity-space-invaders-rt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160527228258:ios:c23ac02dc9a194f392603b",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.SpaceInvadersExample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160527228258-3qrleulvqtvkj6b813igg960nr802eac.apps.googleusercontent.com"
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWvrMpuHCtHVeDjchdkCRc2i_ElsfKvlw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

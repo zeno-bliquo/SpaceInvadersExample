@@ -8,15 +8,19 @@ public class Alien : MonoBehaviour
     public static Sprite alienSprite;
 
     private const float speed = 0.02f;
+/* 
     void Start()
     {
-    
-    }
 
+    }
+ */
     private void Update()
     {
-        if (-PlayerController.VerticalCameraExtent > transform.position.y)
+        if (-PlayerController.VerticalCameraExtent > transform.position.y){
             Destroy(gameObject);
+
+            ScoreManager.instance.RemoveLife();
+        }
     }
     void FixedUpdate()
     {
@@ -28,6 +32,15 @@ public class Alien : MonoBehaviour
         var pos = gameObject.transform.position;
         Destroy(gameObject);
         Destroy(Projectile.CreateExplosion(pos), 0.5f);
+
+
+        if( col.gameObject.name == "ship" ){
+            ScoreManager.instance.RemoveLife();
+        }
+        else 
+            ScoreManager.instance.AddSinglePoint();
+
+        User.instance.AddAlienKilled(1);
     }
 
     public static GameObject Create(Vector3 position)
